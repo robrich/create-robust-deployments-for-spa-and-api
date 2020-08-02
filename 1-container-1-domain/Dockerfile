@@ -1,5 +1,5 @@
 # build .NET app:
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-alpine as buildnet
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine as buildnet
 
 WORKDIR /src
 
@@ -22,13 +22,12 @@ WORKDIR /src
 COPY vueapp/package.json .
 RUN npm install
 
-# webpack build
 COPY vueapp .
 RUN npm run build
 
 
 # Copy results from both places into production container:
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
 
 WORKDIR /app
 

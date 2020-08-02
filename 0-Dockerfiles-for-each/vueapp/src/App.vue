@@ -1,27 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <ApiValues />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img alt="Vue logo" src="./assets/logo.png">
+    <WeatherForecast />
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import ApiValues from "./components/ApiValues.vue";
+import HelloWorld from './components/HelloWorld.vue'
+import WeatherForecast from './components/WeatherForecast.vue'
 
 export default {
-  name: "app",
+  name: 'App',
   components: {
     HelloWorld,
-    ApiValues
+    WeatherForecast
   }
-};
+}
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

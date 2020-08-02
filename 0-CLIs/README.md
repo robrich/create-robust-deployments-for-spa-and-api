@@ -21,7 +21,9 @@ The first step is to create the apps using each product's CLI:
 
    This will walk you through a wizard allowing you to pick your favorite options.
 
-5. To call the backend, we added `src/components/ApiValues.vue`, referenced it from `src/App.vue`, and created `vue.config.js` to proxy requests to the back-end.
+5. To call the backend, we added `src/components/WeatherForecast.vue`, referenced it from `src/App.vue`, and created `vue.config.js` to proxy requests to the back-end.
+
+6. In the API, we change the route from `/weatherforecast` to `/api/weatherforecast` in the `[Route]` attribute of WeatherController.cs.
 
 
 Results

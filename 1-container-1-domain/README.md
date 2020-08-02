@@ -1,7 +1,7 @@
 1 Container, 1 Domain
 =====================
 
-In this technique, both front-end and back-end run from the same container built from a single `Dockerfile`.  We can't scale them separately, but we deploy changes in either simultaniously.
+In this technique, both front-end and back-end run from the same container built from a single `Dockerfile`.  We can't scale them separately, but we deploy changes in either simultaneously.
 
 
 New content since Chapter 0

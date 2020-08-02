@@ -5,7 +5,6 @@ WORKDIR /src
 COPY package.json .
 RUN npm install
 
-# webpack build
 COPY . .
 RUN npm run build
 

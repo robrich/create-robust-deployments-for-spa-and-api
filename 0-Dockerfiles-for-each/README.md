@@ -10,9 +10,9 @@ New content since Chapter 0
 
 2. `vueapp/Dockerfile` is the file used to package the Vue.js app.
 
-3. Each folder has a `.dockerignore` file. Like the `.gitignore` file, these files are not copied into the Docker image.
+3. Each folder has a `.dockerignore` file. Like the `.gitignore` file, the files specified are not copied into the Docker image.
 
-4. `vueapp/nginx.conf` is a config file for Nginx to serve the index.html file as the 404 page.
+4. `vueapp/nginx.conf` is a config file for Nginx to serve the index.html file as the 404 page, allowing the vue app to boot and handle 404s in the browser.
 
 
 Use it

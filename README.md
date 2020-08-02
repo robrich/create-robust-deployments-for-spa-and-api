@@ -1,23 +1,39 @@
-Docker Isn't All Hype; Create Robust Deployments for Vue.js and ASP.NET Core
+Create Robust Deployments for your SPA and API
 ============================================================================
 
-This demonstrates various approaches to building a SPA application and supporting backend in Docker. It is the companion code to the [Docker Isn't All Hype](https://robrich.org/slides/docker-vue-and-aspnetcore/#/) presentation.
+This demonstrates various approaches to building a SPA application and supporting backend APIs in Docker. It is the companion code to the [Create Robust Deployments for your SPA and API](https://robrich.org/slides/create-robust-deployments-for-spa-and-api/#/) presentation.
 
 Vue and ASP.NET were used here purely for demonstration.  The same principles apply to Angular or React, Java or Python, or any technology with a single page app and a supporting back-end.
 
+
+Setup
+-----
+
+- 0-CLIs - Step 0 is to scaffold out each project:
+
+  ```
+  dotnet new webapi --name WebApi
+  vue create vueapp
+  ```
+
+- 0-Dockerfiles-for-each - We start by cloning the first folder, then we add Dockerfiles for each piece. These are a bit advanced in that they use multi-stage builds and cache libraries before pulling in code to speed rebuilds. Here's where most tutorials stop.
+
+
+Approaches
+----------
+
 In each folder, we demonstrate one approach:
 
-- 0-CLIs - Let's scaffold out both projects.
-
-- 0-Dockerfiles-for-each - Classic Dockerfiles for each piece. Here's where most tutorials stop.
+- 1-container-1-domain - Deploy both SPA and back-end into a single container, using the back-end to host the front-end's static files.
 
 - 2-containers-2-domains - We put our website on https://www.example.com/ and our api on https://api.example.com/.
 
 - 2-containers-1-domain - We put both front-end and back-end into separate containers, but stitch them together into a single URL via a Kubernetes Ingress controller.
 
-- 1-container-1-domain - Deploy both SPA and back-end into a single container, using the back-end to host the front-end's static files.
-
-- server-rendered-spa - Visual Studio's New Project template hosts both pieces together and includes server-rendered components.
+- server-rendered-spa - Visual Studio's New Project template hosts both pieces together and includes server-side processing for SPA pages.
 
 
-LICENSE: MIT, Copyright Richardson & Sons, LLC.
+License
+-------
+
+License: MIT, Copyright Richardson & Sons, LLC.

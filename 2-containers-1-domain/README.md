@@ -13,7 +13,7 @@ We assume here that all resources on `/api/*` are to go to the backend, and all 
 New content since Chapter 0
 ---------------------------
 
-1. `Kubernetes` folder contains all the files used to install both docker images into the cluster, and rig them behind the ingress controller.
+1. `k8s` folder contains all the files used to install both docker images into the cluster, and rig them behind the ingress controller.
 
 2. `vueapp/vue.config.js` is for development only, and hooks up Webpack development server.  It looks for requests to `/api/any/path/here` and forwards it to the backend.
 

@@ -12,10 +12,10 @@ New content since Chapter 0
 1. `NetApi/Dockerfile` and `NetApi/Startup.cs` have references to CORS headers using the `CORS_DOMAIN` environment variable.  We can override this as we launch the container:
 
    `docker run -e CORS_DOMAIN=https://foo -p 5000:5000 -d net-api`
-   
+
    The variable we're specifying here is the allowed domain(s) that can use this service.
 
-2. `vueapp/.env.production` and `vueapp/src/components/ApiValues.vue` reference `VUE_APP_BASE_URL` environment variable.  This is the api's domain, and gets baked into the image, so we can't override this at runtime.
+2. `vueapp/.env.production` and `vueapp/src/components/WeatherForecast.vue` reference `VUE_APP_BASE_URL` environment variable.  This is the api's domain, and gets baked into the image, so we can't override this at runtime.
 
 Because these two environment variables will be different in each environment, we need to carefully adjust these files **each time we build** to link the environments back together.
 
