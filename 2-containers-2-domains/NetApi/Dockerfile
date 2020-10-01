@@ -22,7 +22,7 @@ ENV ASPNETCORE_URLS http://+:5000
 EXPOSE 5000
 
 # does not contain the trailing slash
-ENV CORS_DOMAIN http://minikube:3000
+ENV CORS_DOMAIN http://localhost:3000
 
 COPY --from=build /dist .
 
