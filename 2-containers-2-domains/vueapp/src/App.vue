@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <WeatherForecast />
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <WeatherForecast />
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>

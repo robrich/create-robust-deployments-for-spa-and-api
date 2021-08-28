@@ -1,5 +1,5 @@
 # build .NET app:
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine as buildnet
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine as buildnet
 
 WORKDIR /src
 
@@ -27,7 +27,7 @@ RUN npm run build
 
 
 # Copy results from both places into production container:
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine
 
 WORKDIR /app
 

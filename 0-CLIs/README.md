@@ -3,7 +3,7 @@ Create the Apps
 
 The first step is to create the apps using each product's CLI:
 
-1. Download .NET Core SDK from https://dotnet.microsoft.com/download/dotnet-core
+1. Download .NET SDK from https://dotnet.microsoft.com/download/dotnet-core
 
 2. Download Vue.js CLI from NPM using `npm` or `yarn`:
 

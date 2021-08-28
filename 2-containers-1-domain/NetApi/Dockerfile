@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine as build
+FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine as build
 
 WORKDIR /src
 
@@ -13,7 +13,7 @@ RUN dotnet build -c Release
 RUN dotnet publish -c Release -o /dist
 
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-alpine
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine
 
 WORKDIR /app
 
