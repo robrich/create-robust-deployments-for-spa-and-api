@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-api
+  template:
+    metadata:
+      labels:
+        app: node-api
+        version: 2c1d
+    spec:
+      containers:
+      - name: node-api
+        image: node-api:2c1d
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: java-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: java-api
+  template:
+    metadata:
+      labels:
+        app: java-api
+        version: 2c1d
+    spec:
+      containers:
+      - name: java-api
+        image: java-api:2c1d
+        ports:
+        - containerPort: 8080

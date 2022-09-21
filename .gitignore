@@ -6,3 +6,7 @@ obj
 .vscode
 node_modules
 package-lock.json
+target
+dist
+build
+.DS_Store

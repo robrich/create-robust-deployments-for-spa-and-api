@@ -1,0 +1,14 @@
+{
+  "name": "express",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "luxon": "^3.0.3",
+    "morgan": "^1.9.1"
+  }
+}
